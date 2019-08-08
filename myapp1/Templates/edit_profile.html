@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Change Profile</title>
+{% endblock %}
+{% block body %}
+<br>
+    <div class="container">
+        <h1>Change User Info</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Edit Profile</button>
+        </form>
+    </div>
+    
+{% endblock %}

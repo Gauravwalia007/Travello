@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title> Logout </title>
+{% endblock %}
+{% block body %}
+<br>
+    <div class="container">
+        <h1>Logout</h1>
+        <form action="register" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <a class="btn btn-primary" href="/" role="button">Home</a>
+        </form>
+    </div>
+    
+{% endblock %}}
